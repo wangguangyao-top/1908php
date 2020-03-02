@@ -14,7 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-<<<<<<< HEAD
 Route::prefix('goods')->group(function(){
     Route::get('/create','goodsController@create');
     Route::post('/store','goodsController@store');
@@ -24,7 +23,6 @@ Route::prefix('goods')->group(function(){
     Route::get('/destroy/{id}','goodsController@destroy');
 
 });
-=======
 
 
 Route::prefix('admin')->middleware('checklogin')->group(function(){
@@ -46,5 +44,3 @@ Route::get('/brand','BrandController@index');
 Route::get('/brand/edit/{id}','BrandController@edit');
 Route::post('/brand/update/{id}','BrandController@update');
 Route::get('/brand/destroy/{id}','BrandController@destroy');
-
->>>>>>> 216fabe2b7f8eac464cc03075e0075a75f6a9bfb

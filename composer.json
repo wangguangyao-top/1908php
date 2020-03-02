@@ -38,13 +38,8 @@
             "database/seeds",
             "database/factories"
         ],
-<<<<<<< HEAD
         "files":[
             "app/Helpers/functions.php"
-=======
-        "file":[
-            "app/Helper/functions.php"
->>>>>>> 216fabe2b7f8eac464cc03075e0075a75f6a9bfb
         ]
     },
     "autoload-dev": {
