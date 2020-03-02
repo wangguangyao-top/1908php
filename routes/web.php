@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::prefix('admin')->middleware('checklogin')->group(function(){
+	Route::get('create','AdminController@create');
+	Route::post('store','AdminController@store');
+	Route::get('/','AdminController@index');
+	Route::get('edit/{id}','AdminController@edit');
+	Route::post('update/{id}','AdminController@update');
+	Route::get('destroy/{id}','AdminController@destroy');
+});
+
+Route::get('/login','LoginController@login');
+Route::post('/logindo','LoginController@logindo');
