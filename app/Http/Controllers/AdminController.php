@@ -39,7 +39,7 @@ class AdminController extends Controller
     {
         $data=$request->except('_token');
         if($request->hasFile('img')){
-            $data['img'] = upload('img');
+            $data['img'] = uploads('img');
         }
         $res=Admin::insert($data);
         if($res){
