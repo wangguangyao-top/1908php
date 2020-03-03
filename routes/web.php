@@ -21,6 +21,8 @@ Route::prefix('goods')->middleware('checklogin')->group(function(){
     Route::get('/edit/{id}','goodsController@edit');
     Route::post('/update/{id}','goodsController@update');
     Route::get('/destroy/{id}','goodsController@destroy');
+    Route::get('/pay/{order}','goodsController@pay');
+    Route::get('/pay2','goodsController@return_url');
 });
 
 
