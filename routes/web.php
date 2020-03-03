@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::prefix('goods')->group(function(){
+Route::prefix('goods')->middleware('checklogin')->group(function(){
     Route::get('/create','goodsController@create');
     Route::post('/store','goodsController@store');
     Route::get('/index','goodsController@index');
@@ -38,9 +38,11 @@ Route::get('/login','LoginController@login');
 Route::post('/logindo','LoginController@logindo');
 
 //品牌表
-Route::get('/brand/create','BrandController@create');
-Route::post('/brand/store','BrandController@store');
-Route::get('/brand','BrandController@index');
-Route::get('/brand/edit/{id}','BrandController@edit');
-Route::post('/brand/update/{id}','BrandController@update');
-Route::get('/brand/destroy/{id}','BrandController@destroy');
+Route::prefix('brand')->middleware('checklogin')->group(function(){
+Route::get('/create','BrandController@create');
+Route::post('/store','BrandController@store');
+Route::get('/','BrandController@index');
+Route::get('/edit/{id}','BrandController@edit');
+Route::post('/update/{id}','BrandController@update');
+Route::get('/destroy/{id}','BrandController@destroy');
+});

@@ -25,7 +25,7 @@
         <tr @if($k%2==0) class="active" @else class="success" @endif>
             <td>{{$v->brand_id}}</td>
             <td>{{$v->brand_name}}</td>
-            <td><img src="{{env('UPLOAD_URL')}}{{$v->brand_logo}}" width="50" height="50"></td>
+            <td><img src="{{env('APP_UPL')}}{{$v->brand_logo}}" width="50" height="50"></td>
             <td>{{$v->brand_email}}</td>  
             <td>{{$v->brand_desc}}</td>
             <td><a href="{{url('brand/edit/'.$v->brand_id)}}" class="btn btn-info">编辑</a>|<a href="{{url('brand/destroy/'.$v->brand_id)}}" class="btn btn-danger">删除</a></td>

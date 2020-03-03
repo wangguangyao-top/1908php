@@ -23,7 +23,7 @@
         <label for="firstname" class="col-sm-2 control-label">品牌logo</label>
         <div class="col-sm-10">
             <input type="file" name="brand_logo" value="{{$user->brand_logo}}" class="form-control">
-            <img src="{{env('UPLOAD_URL')}}{{$user->brand_logo}}" width="30" height="30">
+            <img src="{{env('APP_UPL')}}{{$user->brand_logo}}" width="30" height="30">
         </div>
     </div>
     <div class="form-group">

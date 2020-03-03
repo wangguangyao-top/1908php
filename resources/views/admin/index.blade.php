@@ -11,7 +11,7 @@
 	<tr>
 		<td>{{$v->id}}</td>
 		<td>{{$v->account}}</td>
-		<td><img src="{{env('UPLOAD_URL')}}{{$v->img}}" width="50" height="50"></td>
+		<td><img src="{{env('APP_UPL')}}{{$v->img}}" width="50" height="50"></td>
 		<td>{{$v->num}}</td>
 		<td>{{$v->mail}}</td>
 		<td>
