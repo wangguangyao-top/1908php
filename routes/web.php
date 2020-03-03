@@ -21,7 +21,6 @@ Route::prefix('goods')->middleware('checklogin')->group(function(){
     Route::get('/edit/{id}','goodsController@edit');
     Route::post('/update/{id}','goodsController@update');
     Route::get('/destroy/{id}','goodsController@destroy');
-
 });
 
 
